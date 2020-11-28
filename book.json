@@ -1,6 +1,6 @@
 {
-  "title": "Blankj's Glory",
-  "author": "Blankj",
+  "title": "一只奋斗的小虫虫",
+  "author": "Jack Jiang",
   "description": "select * from learn",
   "language": "zh-hans",
   "gitbook": "3.2.3",
@@ -16,7 +16,10 @@
     }
   },
   "plugins": [
-    "sitemap-general",
+    "-summary",
+    "-toggle-chapters",
+    "-theme-comscore",
+    "-sitemap-general",
     "simple-page-toc",
     "tags",
     "sharing",
@@ -32,6 +35,9 @@
     "favicon"
   ],
   "pluginsConfig": {
+    "tags": {
+      "placement": "bottom"
+    },
     "sitemap-general": {
       "prefix": "https://angelala00.github.io/"
     },
