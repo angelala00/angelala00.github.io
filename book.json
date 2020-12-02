@@ -16,6 +16,7 @@
     }
   },
   "plugins": [
+    "-lunr", "-search", "search-pro",
     "-summary",
     "-toggle-chapters",
     "-theme-comscore",
