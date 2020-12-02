@@ -1,0 +1,53 @@
+# Maven下载依赖太慢了，可以改用阿里的仓库
+
+改以下几个关键点
+一
+<mirrors>
+<mirror>
+        <id>nexus</id>
+        <mirrorOf>*</mirrorOf>        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+    </mirror>
+    </mirrors>
+二
+<profiles>
+<profile>
+       <id>ali</id>
+      <repositories>
+        <repository>
+            <id>nexus></id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+             <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                        <checksumPolicy>warn</checksumPolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>never</updatePolicy>
+                        <checksumPolicy>fail</checksumPolicy>
+                    </snapshots>
+        </repository>
+      </repositories>
+    <pluginRepositories>
+                <pluginRepository>
+                    <id>nexus</id>
+                    <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                        <checksumPolicy>warn</checksumPolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <checksumPolicy>fail</checksumPolicy>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+    </profile>
+  </profiles>
+三
+<activeProfiles>
+    <activeProfile>ali</activeProfile>
+  </activeProfiles>
+改完后，reload
+
+参考https://blog.csdn.net/angle_sun/article/details/80193855
