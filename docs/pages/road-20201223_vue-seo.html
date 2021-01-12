@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>删除某一次commit操作 · 一只奋斗的小虫虫</title>
+        <title>vue-seo · 一只奋斗的小虫虫</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -73,10 +73,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="road-20201125_code.html" />
+    <link rel="next" href="20201203_shell.html" />
     
     
-    <link rel="prev" href="road-20201202_gitbook_build_dir.html" />
+    <link rel="prev" href="road-20201229_go-start.html" />
     
 
     
@@ -183,7 +183,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="road-20201223_vue-seo.html">
+        <li class="chapter active" data-level="1.4" data-path="road-20201223_vue-seo.html">
             
                 <a href="road-20201223_vue-seo.html">
             
@@ -222,7 +222,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7" data-path="road-20201201_rollback-a-commit.html">
+        <li class="chapter " data-level="1.7" data-path="road-20201201_rollback-a-commit.html">
             
                 <a href="road-20201201_rollback-a-commit.html">
             
@@ -304,7 +304,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >删除某一次commit操作</a>
+        <a href=".." >vue-seo</a>
     </h1>
 </div>
 
@@ -319,31 +319,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#git&#x56DE;&#x6EDA;&#x67D0;&#x4E00;&#x6B21;commit"><b></b>git&#x56DE;&#x6EDA;&#x67D0;&#x4E00;&#x6B21;commit</a></li></ul></div><a href="#git&#x56DE;&#x6EDA;&#x67D0;&#x4E00;&#x6B21;commit" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="git&#x56DE;&#x6EDA;&#x67D0;&#x4E00;&#x6B21;commit"><a name="git&#x56DE;&#x6EDA;&#x67D0;&#x4E00;&#x6B21;commit" class="anchor-navigation-ex-anchor" href="#git&#x56DE;&#x6EDA;&#x67D0;&#x4E00;&#x6B21;commit"><i class="fa fa-link" aria-hidden="true"></i></a><a name="git&#x56DE;&#x6EDA;&#x67D0;&#x4E00;&#x6B21;commit" class="plugin-anchor" href="#git&#x56DE;&#x6EDA;&#x67D0;&#x4E00;&#x6B21;commit"><i class="fa fa-link" aria-hidden="true"></i></a>git&#x56DE;&#x6EDA;&#x67D0;&#x4E00;&#x6B21;commit</h1>
-<p>&#x573A;&#x666F;&#xFF1A;&#x7531;&#x4E8E;&#x67D0;&#x4E9B;&#x539F;&#x56E0;&#x60F3;&#x64A4;&#x6D88;&#x6389;&#x67D0;&#x4E00;&#x6B21;commit&#x7684;&#x6539;&#x52A8;&#xFF0C;&#x6070;&#x597D;&#x8FD9;&#x6B21;&#x7684;&#x6539;&#x52A8;&#x4E0E;&#x524D;&#x540E;&#x7684;commit&#x6587;&#x4EF6;&#x4E92;&#x4E0D;&#x51B2;&#x7A81;&#xFF0C;</p>
-<p>&#x4E8E;&#x662F;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x7406;&#x89E3;+&#x767E;&#x5EA6;+&#x5B9E;&#x64CD;</p>
-<ul>
-<li>1&#xFF0C;&#x67E5;&#x770B;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#xFF0C;<code>git log -n</code> &#xFF08;n&#x662F;&#x60F3;&#x8981;&#x770B;&#x6700;&#x8FD1;&#x51E0;&#x6B21;&#xFF0C;&#x4E0D;&#x786E;&#x5B9A;&#x53EF;&#x4EE5;&#x591A;&#x5C1D;&#x8BD5;&#x51E0;&#x6B21;&#xFF09;&#x627E;&#x5230;&#x6700;&#x8FD1;&#x7684;&#x51E0;&#x6B21;&#x63D0;&#x4EA4;&#xFF0C;&#x6700;&#x597D;&#x662F;&#x627E;&#x5230;&#x8981;&#x56DE;&#x6EDA;&#x7684;&#x90A3;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;&#x7684;&#x524D;&#x4E00;&#x4E24;&#x6B21;&#xFF0C;&#x4EBA;&#x5DE5;&#x786E;&#x4FDD;&#x662F;&#x8981;&#x64CD;&#x4F5C;&#x7684;&#x5185;&#x5BB9;</li>
-<li>2&#xFF0C;&#x6253;patch&#xFF0C;<code>git format-patch -n</code>&#xFF0C;&#x4F1A;&#x6253;&#x51FA;n&#x4E2A;patch&#xFF0C;&#x6BCF;&#x4E2A;patch&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;commit</li>
-<li>3&#xFF0C;&#x56DE;&#x9000;&#xFF0C;<code>git reset &#x2013;hard commit-id</code>&#xFF0C;&#x56DE;&#x9000;&#x5230;&#x8981;&#x5220;&#x9664;&#x7684;commit&#x4E4B;&#x524D;&#x4E00;&#x6B21;commit-id</li>
-<li>4&#xFF0C;&#x5408;&#x5E76;patch&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x60F3;&#x8981;&#x5220;&#x6389;&#x7684;&#x90A3;&#x4E00;&#x6B21;&#x7684;commit&#x5BF9;&#x5E94;&#x7684;patch&#x5220;&#x9664;&#x6389; &#x7136;&#x540E;&#x5408;&#x5E76;&#x5176;&#x5B83; <code>git am *.patch</code>&#xFF0C;&#x4E5F;&#x53EF;&#x76F4;&#x63A5;&#x6309;&#x987A;&#x5E8F;&#x5408;&#x5E76;&#x6BCF;&#x4E00;&#x6B21;commit&#x5BF9;&#x5E94;&#x7684;patch</li>
-<li>5&#xFF0C;reset&#x5230;master&#xFF0C;<code>git reset &#x6700;&#x65B0;&#x4E00;&#x6B21;commitID</code>&#xFF0C;&#x8FD9;&#x91CC;&#x6CA1;&#x6709;&#x5C1D;&#x8BD5;git reset master&#xFF0C;&#x53C2;&#x8003;&#x7684;&#x94FE;&#x63A5;&#x4E2D;&#x6CA1;&#x6709;&#x8FD9;&#x4E00;&#x6B65;&#x4EE5;&#x53CA;&#x540E;&#x9762;&#xFF0C;&#x6240;&#x4EE5;&#x540C;&#x4E8B;&#x5728;&#x64CD;&#x4F5C;&#x5230;&#x8FD9;&#x91CC; &#x518D;&#x4E00;pull&#x4E4B;&#x540E;&#x53C8;&#x5168;&#x90FD;&#x56DE;&#x5230;&#x6700;&#x65B0;&#x4EE3;&#x7801;&#x4E86;&#x3002;</li>
-<li>6&#xFF0C;commit&#xFF0C;&#x628A;&#x6539;&#x52A8;&#x63D0;&#x4EA4;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x5C06;&#x521A;&#x624D;&#x7684;&#x64CD;&#x4F5C;&#x4F5C;&#x4E3A;&#x4E00;&#x6B21;&#x4FEE;&#x6539;&#xFF0C;commit&#x6389;</li>
-<li>7&#xFF0C;push&#xFF0C;&#x5230;&#x8FD9;&#x4E00;&#x6B65;&#x4E4B;&#x524D;&#xFF0C;&#x4F60;&#x6240;&#x505A;&#x7684;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#x5747;&#x53EF;&#x4EE5;&#x6062;&#x590D;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x8981;&#x6015;&#x64CD;&#x4F5C;&#x9519;&#xFF0C;&#x5927;&#x80C6;&#x5C1D;&#x8BD5;&#xFF0C;push&#x4E4B;&#x524D;&#x53EF;&#x4EE5;&#x786E;&#x8BA4;&#x597D;&#x4E86;&#x518D;push</li>
-</ul>
-<p>&#x53C2;&#x8003;&#xFF1A;<a href="https://blog.csdn.net/molaifeng/article/details/52671810" target="_blank">https://blog.csdn.net/molaifeng/article/details/52671810</a></p>
-<p>&#x901A;&#x8FC7;&#x8FD9;&#x6B21;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#xFF0C;&#x5BF9;git reset&#x7684;&#x7406;&#x89E3;&#x6DF1;&#x523B;&#x4E86;&#x4E00;&#x5C42;&#xFF08;&#x4EE5;&#x4E3A;&#x7406;&#x89E3;&#x4E86;&#xFF0C;&#x60F3;&#x8981;&#x5199;&#x51FA;&#x6765;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53D1;&#x73B0;&#x8FD8;&#x662F;&#x5199;&#x4E0D;&#x51FA;&#x6765;&#x3002;&#x3002;&#x3002;&#xFF09;</p>
-<p>git reset</p>
-<p>git reset --hard</p>
-<p>&#x6211;&#x7528;&#x5230;&#x7684;git reset&#x4E09;&#x4E2A;&#x4F7F;&#x7528;&#x573A;&#x666F;</p>
-<ul>
-<li>1&#xFF0C;&#x91CD;&#x65B0;commit</li>
-<li>2&#xFF0C;&#x672C;&#x6B21;&#x4E2D;&#x7684;&#x7B2C;3&#x6B65;</li>
-<li>3&#xFF0C;&#x672C;&#x6B21;&#x4E2D;&#x7684;&#x7B2C;5&#x6B65;</li>
-</ul>
-<p>&#x5E94;&#x8BE5;&#x662F;&#x53EF;&#x4EE5;&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#x7684;&#xFF0C;&#x8FD9;&#x91CC;&#x6682;&#x65F6;&#x653E;&#x5F03;</p>
-<p>&#x4E0B;&#x6B21;&#x603B;&#x7ED3;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x53C2;&#x8003;&#x5982;&#x4E0B;url</p>
-<p><a href="https://www.jianshu.com/p/c2ec5f06cf1a" target="_blank">https://www.jianshu.com/p/c2ec5f06cf1a</a></p><!-- tags --><div id="tags" class="tags"><p><i class="fa fa-tags" aria-hidden="true"></i> <a href="../tags.html#git">git</a></p></div><!-- tagsstop -->
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#vue&#x5DE5;&#x7A0B;&#x7684;seo&#x65B9;&#x6848;&#x89E3;&#x51B3;&#x8FC7;&#x7A0B;"><b></b>vue&#x5DE5;&#x7A0B;&#x7684;seo&#x65B9;&#x6848;&#x89E3;&#x51B3;&#x8FC7;&#x7A0B;</a></li></ul></div><a href="#vue&#x5DE5;&#x7A0B;&#x7684;seo&#x65B9;&#x6848;&#x89E3;&#x51B3;&#x8FC7;&#x7A0B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="vue&#x5DE5;&#x7A0B;&#x7684;seo&#x65B9;&#x6848;&#x89E3;&#x51B3;&#x8FC7;&#x7A0B;"><a name="vue&#x5DE5;&#x7A0B;&#x7684;seo&#x65B9;&#x6848;&#x89E3;&#x51B3;&#x8FC7;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#vue&#x5DE5;&#x7A0B;&#x7684;seo&#x65B9;&#x6848;&#x89E3;&#x51B3;&#x8FC7;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="vue&#x5DE5;&#x7A0B;&#x7684;seo&#x65B9;&#x6848;&#x89E3;&#x51B3;&#x8FC7;&#x7A0B;" class="plugin-anchor" href="#vue&#x5DE5;&#x7A0B;&#x7684;seo&#x65B9;&#x6848;&#x89E3;&#x51B3;&#x8FC7;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>vue&#x5DE5;&#x7A0B;&#x7684;seo&#x65B9;&#x6848;&#x89E3;&#x51B3;&#x8FC7;&#x7A0B;</h1>
+<p>vue&#x6298;&#x817E;&#x4E86;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#xFF0C;&#x5DE5;&#x5177;&#x7AD9;&#x7B97;&#x662F;&#x53EF;&#x4EE5;&#x8DD1;&#x8D77;&#x6765;&#x4E86;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x589E;&#x52A0;&#x67D0;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;&#x9875;&#x9762;&#xFF0C;&#x53EA;&#x6539;&#x52A8;&#x5F88;&#x5C11;&#x7684;&#x90E8;&#x5206;&#x5373;&#x53EF;<br>&#x7136;&#x540E;&#x8003;&#x8651;&#x5230;&#x4E86;vue&#x7684;seo&#x95EE;&#x9898;&#xFF0C;&#x672C;&#x8EAB;vue&#x7684;seo&#x662F;&#x4E0D;&#x53CB;&#x597D;&#x7684;&#xFF0C;&#x767E;&#x5EA6;&#x641C;&#x7D22;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x6709;SSR&#xFF0C;&#x6709;SPA&#xFF0C;&#x8FD9;&#x91CC;&#x7565;&#x53BB;&#x5F88;&#x591A;&#x5185;&#x5BB9;  </p>
+<p>&#x6700;&#x7EC8;&#x9009;&#x62E9;&#x4E86;spa&#x5F00;&#x59CB;&#x6298;&#x817E;<br>&#x6298;&#x817E;&#x4E86;3&#x5929;<br>&#x6628;&#x665A;&#x662F;&#x751F;&#x6210;&#x4E86;&#x9759;&#x6001;&#x7684;html<br>&#x4ECA;&#x5929;&#x8C03;&#x6574;&#x4E86;tdk&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x7136;&#x540E;&#x53D1;&#x73B0;&#x53EA;&#x80FD;&#x6BCF;&#x4E2A;&#x9875;&#x9762;&#x90FD;&#x4E00;&#x6837;&#xFF0C;&#x60F3;&#x60F3;&#x4E0D;&#x5408;&#x7406;&#xFF0C;&#x7EE7;&#x7EED;&#x767E;&#x5EA6;<br>&#x5F97;&#x5230;&#x4E86;vue-meta&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#xFF0C;&#x660E;&#x5929;&#x7EE7;&#x7EED;&#x5C1D;&#x8BD5;&#x5427;  </p>
+<p>-- 20201223</p>
+
                                 
                                 </section>
                             
@@ -370,12 +350,12 @@
 
             
                 
-                <a href="road-20201202_gitbook_build_dir.html" class="navigation navigation-prev " aria-label="Previous page: gitbook build输出指定目录">
+                <a href="road-20201229_go-start.html" class="navigation navigation-prev " aria-label="Previous page: go-start">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="road-20201125_code.html" class="navigation navigation-next " aria-label="Next page: 乱码解决思路">
+                <a href="20201203_shell.html" class="navigation navigation-next " aria-label="Next page: 记一次脚本异常现象排查">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -386,7 +366,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"删除某一次commit操作","level":"1.7","depth":1,"next":{"title":"乱码解决思路","level":"1.8","depth":1,"path":"pages/road-20201125_code.md","ref":"pages/road-20201125_code.md","articles":[]},"previous":{"title":"gitbook build输出指定目录","level":"1.6","depth":1,"path":"pages/road-20201202_gitbook_build_dir.md","ref":"pages/road-20201202_gitbook_build_dir.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-summary","-toggle-chapters","-theme-comscore","-sitemap-general","simple-page-toc","tags","sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/Blankj"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"./source/images/donate.png","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"sitemap-general":{"prefix":"https://angelala00.github.io/"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"Blankj","repo":"glory","type":"star","size":"small","count":true}]},"tags":{"placement":"bottom"},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Jack Jiang","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"一只奋斗的小虫虫","language":"zh-hans","links":{"sidebar":{"我的狗窝":"https://angelala00.github.io"}},"gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"pages/road-20201201_rollback-a-commit.md","mtime":"2020-12-02T15:47:03.837Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-12T16:57:21.977Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"vue-seo","level":"1.4","depth":1,"next":{"title":"记一次脚本异常现象排查","level":"1.5","depth":1,"path":"pages/20201203_shell.md","ref":"pages/20201203_shell.md","articles":[]},"previous":{"title":"go-start","level":"1.3","depth":1,"path":"pages/road-20201229_go-start.md","ref":"pages/road-20201229_go-start.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-summary","-toggle-chapters","-theme-comscore","-sitemap-general","simple-page-toc","tags","sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/Blankj"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"./source/images/donate.png","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"sitemap-general":{"prefix":"https://angelala00.github.io/"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"Blankj","repo":"glory","type":"star","size":"small","count":true}]},"tags":{"placement":"bottom"},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Jack Jiang","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"一只奋斗的小虫虫","language":"zh-hans","links":{"sidebar":{"我的狗窝":"https://angelala00.github.io"}},"gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"pages/road-20201223_vue-seo.md","mtime":"2021-01-12T16:57:13.767Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-12T16:57:21.977Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

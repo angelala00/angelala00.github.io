@@ -37,7 +37,7 @@ go mod init godemo
 -2021年1月3号  
 
 开始尝试了解一下gin的api  
-根据夜莺的ams源码，也尝试了解了一点http.server
+根据夜莺的ams源码，也尝试了解了一点http.server  
 我目前的理解是，http.server是一个http服务框架，gin是一个web框架，  
 http.server可以用gin的对象作为handler来处理web请求  
 目前是没有体会到用http.server的好处，推断肯定是可控性较强，有待以后体会  
@@ -45,4 +45,4 @@ http.server可以用gin的对象作为handler来处理web请求
 
 -1月6号
 
-疑问点：对go的模块管理还不能够完全理解和掌握
+疑问点：对go的模块管理还不能够完全理解和掌握  
